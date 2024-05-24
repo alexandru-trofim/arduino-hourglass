@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../../PlatformIO/Projects/240519-230200-nanoatmega328"
+		},
+		{
+			"name": "240520-205927-nanoatmega328",
+			"path": "../../../PlatformIO/Projects/240520-205927-nanoatmega328"
+		},
+		{
+			"name": "hourglass",
+			"path": "../../../PlatformIO/Projects/hourglass"
+		},
+		{
+			"name": "test_mpu",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
