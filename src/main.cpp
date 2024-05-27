@@ -4,22 +4,23 @@
 #include <LedControl.h>
 #include <Wire.h>
 #include <EncButton.h>
+// #include <Button.h>
 
 #include "Timer.h"
 #include "print3x5.hpp"
 
 // Matrix
-#define PIN_DATAIN 4
-#define PIN_CLK 5 
-#define PIN_CS 6 
+#define PIN_DATAIN 6
+#define PIN_CLK 4
+#define PIN_CS 5
 #define MATRIX_A 0
 #define MATRIX_B 1
 #define PART_AMOUNT 55
 // Define the number of devices (8x8 matrices) we have
 #define NUM_DEVICES 2
 // We have to invert the coordiantes because the matrices are rotated
-#define BTN1_PIN 2
-#define BTN2_PIN 3
+#define BTN1_PIN 7
+#define BTN2_PIN 8
 #define invert(x) (7 - x)
 
 typedef struct {
@@ -428,7 +429,7 @@ void loop() {
 
     float angle_radians = atan2(accel_x, accel_z);
     float angle_degrees = angle_radians * 180 / PI;
-    angle_degrees += 40;
+    angle_degrees -= 45;
 
     // Ensure the angle is between 0 and 360 degrees
     if (angle_degrees < 0) {
